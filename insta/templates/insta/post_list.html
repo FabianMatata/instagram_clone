@@ -1,0 +1,45 @@
+{% extends 'insta/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+    <div class="card">
+        <div class="card-header">
+            <div class="profile_image">
+
+            </div>
+            <div class="post_info">
+                <div class="post_name">{{ post.author }}</div>
+                <div class="post_location">New York</div>
+            </div>
+            <div class="post_options"><i class="fas fa-ellipsis-h"></i></div>
+        </div>
+
+        <div class="post_image">
+            {% if post.image %}
+                <img src="{{ post.image.url }}" alt="">
+            {% endif  %}
+        </div>
+
+        <div class="engagement">
+            <a href=""><i class="far fa-heart"></i></a>
+            <a href=""><i class="far fa-comment"></i></a>
+            <a href=""><i class="far fa-share-square"></i></a>
+            <a href=""><i class="far fa-bookmark"></i></a>
+        </div>
+
+        <div class="likes">
+            <a href="">345</a>
+        </div>
+
+        <div class="caption">
+            <a href=""><h2>{{ post.author }}</h2></a>
+            <span><p>{{post.caption}}</p></span>
+        </div>
+
+        <div class="time_posted">
+            {{ post.created_date | timesince }} ago
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}
+  
