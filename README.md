@@ -1,4 +1,4 @@
-# instaclone
+# Instagram Clone
 
 ## Author
 [Fabian Matata](https://github.com/FabianMatata)  
@@ -7,6 +7,7 @@
 # Description  
 This is a clone of  Instagram where people share their  images and videos for other users to view. 
 Users can sign up, login, view and post photos, search and follow other users.
+
 ##  Live Link  
 https://django-instagram-clone.herokuapp.com
   
@@ -75,8 +76,8 @@ Open the application on your browser `127.0.0.1:8000`.
 * There are no known bugs currently but pull requests are allowed incase you spot a bug  
   
 ## Contact Information   
-If you have any question or contributions, please email me at [mfabian601@gmail.com]  
+If you have any question or contributions, please email me at mfabian601@gmail.com
   
 ## License 
 
-* Copyright (c) 2022 **Fabian Matata**
+Copyright (c) 2022 **Fabian Matata**
