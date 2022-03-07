@@ -27,7 +27,10 @@ SECRET_KEY = 'django-insecure--qrflxs65q8kjhi=%=$ve-kh^xjugygvl6y_rn!!z0)!_wc!1h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-instagram-clone.herokuapp.com']
+ALLOWED_HOSTS = [
+    'django-instagram-clone.herokuapp.com',
+    '127.0.0.1'
+    ]
 
 
 # Application definition
