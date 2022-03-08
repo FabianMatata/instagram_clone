@@ -10,6 +10,17 @@ from django.views.generic import (
 
 # Create your views here.
 
+def register(response):
+    return render()
+
+def registerPage(request):
+    context = {}
+    return render(request, 'insta/signup.html', context)
+
+def loginPage(request):
+    context = {}
+    return render(request, 'insta/login.html', context)
+
 class PostListView(ListView):
     template_name = "insta/post_list.html"
     queryset = Post.objects.all().filter(created_date__lte=timezone.now()).order_by('-created_date')

@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'crispy_forms',
 
     'insta',
+
+    'authy',
 ]
 
 MIDDLEWARE = [
@@ -63,7 +65,7 @@ ROOT_URLCONF = 'instaclone.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS':[os.path.join(BASE_DIR, 'instaclone/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -132,7 +134,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+STATICFILES_DIRS = [ 
+    os.path.join(BASE_DIR, 'instaclone/static') 
+]
 
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.Emailbackend'
+
+LOGIN_REDIRECT_URL = 'index'
+LOGOUT_DIRECT_URL = 'login'
+LOGIN_URL = '/user/login/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
